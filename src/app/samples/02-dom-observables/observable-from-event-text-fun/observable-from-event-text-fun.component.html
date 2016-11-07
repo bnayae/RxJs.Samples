@@ -1,0 +1,12 @@
+<div class="app-content">
+	<md-card layout-align="start start">
+		<md-input [formControl]="source">
+			<md-placeholder>
+				<i class="material-icons app-input-icon">search</i> Search
+			</md-placeholder>
+		</md-input>
+		<p md-line>Count = {{charCount | async}}</p>
+		<p md-line>Compact = {{compact | async}}</p>
+		<p md-line>Stat = {{stat | async}}</p>
+	</md-card>
+</div>

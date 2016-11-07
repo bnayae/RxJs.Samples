@@ -1,0 +1,11 @@
+<div class="app-content">
+	<md-card>
+		<div>{{(ofers | async)?.kind | enum:'Dress,Shirt,Sweater,Pants'}}: {{(ofers | async)?.getPriceAfterDiscount()}}$</div>
+		<md-list>
+			<h2 md-subheader>Purchases</h2>
+			<md-list-item *ngFor="let item of purchases">
+				<p>{{item.kind | enum:'Dress,Shirt,Sweater,Pants'}}: Price = {{item.price}}, Discount = {{item.discount}}, Quality = {{item.quality | enum:'A,B'}}</p>
+			</md-list-item>
+		</md-list>
+	</md-card>
+</div>

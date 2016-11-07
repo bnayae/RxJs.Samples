@@ -1,0 +1,18 @@
+<div class="app-content">
+	<md-card layout-align="start start">
+		<md-input [formControl]="source">
+			<md-placeholder>
+				<i class="material-icons app-input-icon">search</i> Search
+			</md-placeholder>
+		</md-input>
+		<p md-line>Count = {{charCount | async}}</p>
+	</md-card>
+	<br/>
+
+	<md-card layout-align="start start">
+		<md-list>
+			<h3 md-subheader>All</h3>
+			<md-list-item *ngFor="let item of items">{{item}}</md-list-item>
+		</md-list>
+	</md-card>
+</div>

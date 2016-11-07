@@ -1,0 +1,91 @@
+<div layout="row" ng-controller="menuCtrl" layout-fill>
+
+	<!-- https://github.com/angular/material2/blob/master/src/lib/sidenav/README.md -->
+	<md-sidenav-layout [class.m2app-dark]="true" fullscreen>
+
+		<md-sidenav #sidenav mode="side" class="app-sidenav" md-is-open=true md-is-locked-ope=true>
+			<md-list>
+				<md-list-item>
+					<div md-button [routerLink]="['observable-intro-data-over-time']">
+						Observable: intro: data-over-time
+					</div>
+				</md-list-item>
+				<md-list-item>
+					<div md-button [routerLink]="['observable-intro-data-over-time-with-cancel']">
+						Observable: intro: data-over-time-with-cancel
+					</div>
+				</md-list-item>
+				<md-list-item>
+					<div md-button [routerLink]="['observable-intro-data-over-time-pineline']">
+						Observable-intro: data-over-time-pineline
+					</div>
+				</md-list-item>
+				<md-list-item>
+					<div md-button [routerLink]="['observable-from-event']">
+						Observable: from-event
+					</div>
+				</md-list-item>
+				<md-list-item>
+					<div md-button [routerLink]="['observable-from-event-more']">
+						Observable: from-event-more
+					</div>
+				</md-list-item>
+				<md-list-item>
+					<div md-button [routerLink]="['observable-from-event-text']">
+						observable-from-event-text
+					</div>
+				</md-list-item>
+				<md-list-item>
+					<div md-button [routerLink]="['observable-from-event-text-more']">
+						Observable: from-event-text-more
+					</div>
+				</md-list-item>
+				<md-list-item>
+					<div md-button [routerLink]="['observable-from-event-text-relax']">
+						Observable: from-event-text-relax
+					</div>
+				</md-list-item>
+				<md-list-item>
+					<div md-button [routerLink]="['observable-from-event-text-fun']">
+						Observable: from-event-text-fun
+					</div>
+				</md-list-item>
+				<md-list-item>
+					<div md-button [routerLink]="['drag-drop']">
+						Drag Drop
+					</div>
+				</md-list-item>
+				<md-list-item>
+					<div md-button [routerLink]="['clothing-into-array']">
+						Clothing (into array)
+					</div>
+				</md-list-item>
+				<md-list-item>
+					<div md-button [routerLink]="['clothing-aggregation']">
+						Clothing (aggregation)
+					</div>
+				</md-list-item>
+			</md-list>
+		</md-sidenav>
+
+		<md-toolbar color="secondary">
+			<button md-icon-button [routerLink]="['home']">
+       <md-icon>home</md-icon>
+      </button>
+			<button md-icon-button (click)="sidenav.toggle()">
+       <md-icon>more_vert</md-icon>
+      </button>
+			<!--<button md-button [md-menu-trigger-for]="menu">MENU</button>-->
+			<!--<button md-icon-button [md-menu-trigger-for]="menu">
+          <md-icon>more_vert</md-icon>
+        </button>-->
+			<!--<button md-button [md-menu-trigger-for]="menu">MENU</button>-->
+			<!--<button md-icon-button [md-menu-trigger-for]="menu">
+          <md-icon>more_vert</md-icon>
+        </button>-->
+			<div style="margin-left:10px">NG2 + rxJs</div>
+		</md-toolbar>
+		<br/>
+		<router-outlet></router-outlet>
+	</md-sidenav-layout>
+</div>
