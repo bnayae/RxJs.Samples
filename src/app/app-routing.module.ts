@@ -15,6 +15,7 @@ import { ObservableFromEventTextFunComponent } from './samples/02-dom-observable
 import { ClothingIntoArrayComponent} from './samples/clothing/into-array/clothing-into-array.component';
 import { ClothingAggregationComponent} from './samples/clothing/aggregation/clothing-aggregation.component';
 import { DragDropComponent } from './samples/drag-drop/drag-drop.component';
+import { websocketComponent } from './samples/websocket/websocket.component';
 
 const routes = [
     {path: '', component: HomeComponent },    
@@ -31,6 +32,7 @@ const routes = [
     {path: 'drag-drop', component: DragDropComponent },   
     {path: 'clothing-into-array', component: ClothingIntoArrayComponent },   
     {path: 'clothing-aggregation', component: ClothingAggregationComponent },   
+    {path: 'websocket', component: websocketComponent },   
 ];
 
 @NgModule({

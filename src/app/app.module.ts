@@ -23,6 +23,7 @@ import { ClothingAggregationComponent} from './samples/clothing/aggregation/clot
 import { EnumPipe } from './shared/enum.pipe';
 import { SchedulingComponent } from './samples/scheduling/scheduling.component';
 import { DragDropComponent } from './samples/drag-drop/drag-drop.component';
+import { websocketComponent } from './samples/websocket/websocket.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { DragDropComponent } from './samples/drag-drop/drag-drop.component';
     ClothingAggregationComponent,
     SchedulingComponent,
     DragDropComponent,   
+    websocketComponent
   ],
   imports: [
     BrowserModule,
