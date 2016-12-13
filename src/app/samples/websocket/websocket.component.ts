@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Injectable} from '@angular/core';
 import {WebSocketService} from './../../shared/websocket-service/websocket-service';
-
+import { LogMessage } from '.';
 //import { List, Map } from 'immutable';
 import * as Immutable from 'immutable';
 
@@ -17,13 +17,16 @@ import 'rxjs/add/observable/interval'
 })
 export class websocketComponent implements OnInit {
 
-  items: MessageEvent[] = [];
+  items: LogMessage[] = [];
   subject: rx.Subject<MessageEvent> // needed for sending messages
   constructor(private _wsService: WebSocketService) { }
 
   ngOnInit() : void {
     this.subject = this._wsService.connect("ws://localhost:4567/Log"); 
-    this.subject.subscribe(
+    this.subject
+        .map(m => <LogMessage>JSON.parse(m.data))
+        //.map(m => m.data)
+        .subscribe(
       item => 
       {
         this.items.splice(0, 0, item);
