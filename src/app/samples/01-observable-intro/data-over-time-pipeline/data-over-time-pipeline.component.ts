@@ -19,7 +19,6 @@ export class DataOverTimePipelineComponent implements OnInit {
 
   current: Observable<string>;
   items: string[] = [];
-  state:string = 'Active';
   subscription: ISubscription;
 
   constructor() { }
@@ -36,7 +35,7 @@ export class DataOverTimePipelineComponent implements OnInit {
                         .subscribe(
                           item => this.items.push(item),
                           ex => console.log(ex), // error is handled for the entoire pipe-line
-                          () => this.state = 'Done');
+                          () => console.log('Done'));
                           
   }
 

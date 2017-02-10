@@ -13,7 +13,7 @@ export class ClothingStoreService {
         let manufacturerB = new ClothingManufacturerService();
         this.clothing = rx.Observable.merge<ClothingUnit>(
                             manufacturerA.clothing,
-                            manufacturerA.clothing)
+                            manufacturerB.clothing)
                             .map(c => c.flatten(
                                         3, // factor
                                         Math.floor(Math.random() * 5) * 10)) // discount

@@ -14,15 +14,13 @@ import 'rxjs/add/observable/fromEvent'
 })
 export class ObservableFromEventComponent implements OnInit {
 
-  inputs:Observable<MouseEvent>;
   total:number = 0;
 
   constructor() { }
 
   ngOnInit() {
     let btn = document.getElementById('input');
-
-    this.inputs = Observable.fromEvent<MouseEvent>(btn, 'click');
-    this.inputs.subscribe(_ => this.total++);
+    let inputs:Observable<MouseEvent> = Observable.fromEvent<MouseEvent>(btn, 'click');
+    inputs.subscribe(_ => this.total++);
   }
 }

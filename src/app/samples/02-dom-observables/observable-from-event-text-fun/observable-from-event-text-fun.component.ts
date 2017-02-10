@@ -1,22 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FormControl, FormGroup, Validators } from '@angular/forms' // use of form control
+import * as rx from 'rxjs';
 //import { List, Map } from 'immutable';
 import * as Immutable from 'immutable';
-
-import { Observable } from 'rxjs/Observable';
-//import 'rxjs/Rx' // import all rxjs
-import "rxjs/Subject";
-import 'rxjs/add/observable/interval'
-import 'rxjs/add/observable/fromEvent'
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/do';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/toPromise';
-import 'rxjs/add/operator/debounceTime';
-import 'rxjs/add/operator/scan';
-import 'rxjs/add/operator/distinctUntilChanged';
-import 'rxjs/add/operator/startWith';
-import { FormControl, FormGroup, Validators } from '@angular/forms' // use of form control
 
 @Component({
   selector: 'app-observable-from-event-text-fun',
@@ -26,20 +12,20 @@ import { FormControl, FormGroup, Validators } from '@angular/forms' // use of fo
 export class ObservableFromEventTextFunComponent implements OnInit {
 
   source: FormControl = new FormControl();
-  charCount: Observable<number>;
-  compact: Observable<string>;
-  stat: Observable<string>;
+  charCount: rx.Observable<number>;
+  compact: rx.Observable<string>;
+  stat: rx.Observable<string>;
 
   constructor() { }
 
   ngOnInit() {
-    let texts: Observable<string> = this.source.valueChanges;
+    let texts: rx.Observable<string> = this.source.valueChanges;
     this.charCount = texts.map(m => m.length);
 
-    let charStream:Observable<string> = 
+    let charStream:rx.Observable<string> = 
                   texts.map(m => m.slice(-1));// last char
 
-    this.compact =  charStream
+    this.compact = charStream
                         .distinctUntilChanged()
                         .scan((acc, val) => acc + val); // aggregate
 

@@ -17,7 +17,6 @@ export class DataOverTimeWithCancelComponent implements OnInit {
 
   current: Observable<number>;
   items: number[] = [];
-  state:string = 'Active';
   subscription: ISubscription;
 
   constructor() { }
@@ -25,18 +24,18 @@ export class DataOverTimeWithCancelComponent implements OnInit {
   ngOnInit() {
     const query: Observable<number> = Observable.interval(1000).take(6);
 
-    this.current = query;
     // not cancellable
     //let promise: Promise<void> = query.forEach(item => this.items.push(item));
-    //promise.then(() => this.state = 'Done');
-
+  
     // cancellable
     this.subscription = query.subscribe(
                           item => this.items.push(item),
                           ex => console.log(ex),
-                          () => this.state = 'Done');
+                          () => console.log('Done'));
                           
     setTimeout(() => this.subscription.unsubscribe(), 2500);
-  }
+    
+    this.current = query.takeWhile(m => !this.subscription.closed);
+}
 
 }
