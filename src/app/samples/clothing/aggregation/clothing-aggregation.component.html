@@ -1,5 +1,9 @@
 <div class="app-content">
 	<md-card>
+		<h2>12 -Clothing (aggregation)</h2>
+	</md-card>
+	<br/>
+	<md-card>
 		<div>{{(ofers | async)?.kind | enum:'Dress,Shirt,Sweater,Pants'}}: {{(ofers | async)?.getPriceAfterDiscount()}}$</div>
 		<md-list>
 			<h2 md-subheader>Purchases</h2>
