@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms' // use of form control
+import { FormControl } from '@angular/forms' // use of form control
 import * as rx from 'rxjs';
 
 @Component({
@@ -10,18 +10,18 @@ import * as rx from 'rxjs';
 export class ObservableFromEventTextRelaxComponent implements OnInit {
 
   source: FormControl = new FormControl();
-  charCount:rx.Observable<number>;
+  charCount: rx.Observable<number>;
   items:string[] = [];
   constructor() { }
 
   ngOnInit() {
-    let texts:rx.Observable<string> = 
-                  this.source.valueChanges 
+    let texts: rx.Observable<string> = 
+                  this.source.valueChanges;
 
     this.charCount = texts.map(m => m.length);
-    
+
     let relax = texts.debounceTime(1000);
-    relax.subscribe(text => this.items.push(text), 
+    relax.subscribe(text => this.items.push(text),
                     ex => console.log(ex));
   }
 

@@ -44,5 +44,4 @@ export class ClothingUnit {
             0);
         return clone;
     }
-
 }

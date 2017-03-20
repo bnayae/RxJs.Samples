@@ -18,7 +18,7 @@ import 'rxjs/add/observable/interval'
 export class websocketComponent implements OnInit {
 
   items: LogMessage[] = [];
-  subject: rx.Subject<MessageEvent> // needed for sending messages
+  subject: rx.Subject<MessageEvent>; // needed for sending messages
   constructor(private _wsService: WebSocketService) { }
 
   ngOnInit() : void {
@@ -27,11 +27,9 @@ export class websocketComponent implements OnInit {
         .map(m => <LogMessage>JSON.parse(m.data))
         //.map(m => m.data)
         .subscribe(
-      item => 
-      {
+      item => {
         this.items.splice(0, 0, item);
-        if (this.items.length > 10)
-        {
+        if (this.items.length > 10) {
           this.items.pop();
         }
       },

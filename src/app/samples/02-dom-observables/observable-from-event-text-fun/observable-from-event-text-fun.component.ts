@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms' // use of form control
+import { FormControl } from '@angular/forms' // use of form control
 import * as rx from 'rxjs';
-//import { List, Map } from 'immutable';
+// import { List, Map } from 'immutable';
 import * as Immutable from 'immutable';
 
 @Component({
@@ -22,8 +22,8 @@ export class ObservableFromEventTextFunComponent implements OnInit {
     let texts: rx.Observable<string> = this.source.valueChanges;
     this.charCount = texts.map(m => m.length);
 
-    let charStream:rx.Observable<string> = 
-                  texts.map(m => m.slice(-1));// last char
+    let charStream: rx.Observable<string> = 
+                  texts.map(m => m.slice(-1)); // last char
 
     this.compact = charStream
                         .distinctUntilChanged()

@@ -30,7 +30,7 @@ export class ObservableFromEventTextMoreComponent implements OnInit {
   ngOnInit() {
     let texts:rx.Observable<string> = this.source.valueChanges;
     this.charCount = texts.map(m => m.length);
-    texts.subscribe(text => this.items.push(text), 
+    texts.subscribe(text => this.items.push(text),
                     ex => console.log(ex));
   }
 }

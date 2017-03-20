@@ -25,7 +25,7 @@ export class DataOverTimePipelineComponent implements OnInit {
 
   ngOnInit() {
     const query: Observable<string> = Observable.interval(300)
-                        .filter(item => item % 2 == 0)
+                        .filter(item => item % 2 === 0)
                         .map(item => '# ' + item + ' #')
                         .take(6);
 
@@ -36,7 +36,6 @@ export class DataOverTimePipelineComponent implements OnInit {
                           item => this.items.push(item),
                           ex => console.log(ex), // error is handled for the entoire pipe-line
                           () => console.log('Done'));
-                          
   }
 
 }
