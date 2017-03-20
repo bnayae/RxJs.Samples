@@ -18,21 +18,21 @@ import { DragDropComponent } from './samples/drag-drop/drag-drop.component';
 import { websocketComponent } from './samples/websocket/websocket.component';
 
 const routes = [
-    {path: '', component: HomeComponent },    
+    {path: '', component: HomeComponent },
     {path: 'home', component: HomeComponent },
     {path: 'observable-intro-data-over-time', component: DataOverTimeComponent },
-    {path: 'observable-intro-data-over-time-with-cancel', component: DataOverTimeWithCancelComponent },   
-    {path: 'observable-intro-data-over-time-pineline', component: DataOverTimePipelineComponent },   
-    {path: 'observable-from-event', component: ObservableFromEventComponent },   
-    {path: 'observable-from-event-more', component: ObservableFromEventMoreComponent },   
-    {path: 'observable-from-event-text', component: ObservableFromEventTextComponent },   
-    {path: 'observable-from-event-text-more', component: ObservableFromEventTextMoreComponent },   
-    {path: 'observable-from-event-text-relax', component: ObservableFromEventTextRelaxComponent },   
-    {path: 'observable-from-event-text-fun', component: ObservableFromEventTextFunComponent },   
-    {path: 'drag-drop', component: DragDropComponent },   
-    {path: 'clothing-into-array', component: ClothingIntoArrayComponent },   
-    {path: 'clothing-aggregation', component: ClothingAggregationComponent },   
-    {path: 'websocket', component: websocketComponent },   
+    {path: 'observable-intro-data-over-time-with-cancel', component: DataOverTimeWithCancelComponent },
+    {path: 'observable-intro-data-over-time-pineline', component: DataOverTimePipelineComponent },
+    {path: 'observable-from-event', component: ObservableFromEventComponent },
+    {path: 'observable-from-event-more', component: ObservableFromEventMoreComponent },
+    {path: 'observable-from-event-text', component: ObservableFromEventTextComponent },
+    {path: 'observable-from-event-text-more', component: ObservableFromEventTextMoreComponent },
+    {path: 'observable-from-event-text-relax', component: ObservableFromEventTextRelaxComponent },
+    {path: 'observable-from-event-text-fun', component: ObservableFromEventTextFunComponent },
+    {path: 'drag-drop', component: DragDropComponent },
+    {path: 'clothing-into-array', component: ClothingIntoArrayComponent },
+    {path: 'clothing-aggregation', component: ClothingAggregationComponent },
+    {path: 'websocket', component: websocketComponent },
 ];
 
 @NgModule({

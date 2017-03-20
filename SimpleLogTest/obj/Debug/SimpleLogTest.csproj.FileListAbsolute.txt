@@ -1,0 +1,9 @@
+C:\TFS\GIT\Rx\RxJs.Samples\SimpleLogTest\bin\Debug\SimpleLogTest.exe.config
+C:\TFS\GIT\Rx\RxJs.Samples\SimpleLogTest\bin\Debug\SimpleLogTest.exe
+C:\TFS\GIT\Rx\RxJs.Samples\SimpleLogTest\bin\Debug\SimpleLogTest.pdb
+C:\TFS\GIT\Rx\RxJs.Samples\SimpleLogTest\bin\Debug\Newtonsoft.Json.dll
+C:\TFS\GIT\Rx\RxJs.Samples\SimpleLogTest\bin\Debug\websocket-sharp.dll
+C:\TFS\GIT\Rx\RxJs.Samples\SimpleLogTest\bin\Debug\Newtonsoft.Json.xml
+C:\TFS\GIT\Rx\RxJs.Samples\SimpleLogTest\bin\Debug\websocket-sharp.xml
+C:\TFS\GIT\Rx\RxJs.Samples\SimpleLogTest\obj\Debug\SimpleLogTest.exe
+C:\TFS\GIT\Rx\RxJs.Samples\SimpleLogTest\obj\Debug\SimpleLogTest.pdb
